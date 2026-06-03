@@ -60,6 +60,21 @@
       (window, ["alloy"]);
     </script>
 
+<script nonce="aem" src="/scripts/styleconfigurations.js"></script>
+
+<script nonce="aem">
+    !function (n, o) {
+      o.forEach(function (o) {
+        n[o] || ((n.__alloyNS = n.__alloyNS ||
+          []).push(o), n[o] = function () {
+            var u = arguments; return new Promise(
+              function (i, l) { n[o].q.push([i, l, u]) })
+          }, n[o].q = [])
+      })
+    }
+      (window, ["alloy"]);
+    </script>
+
 <script nonce="aem" src="/scripts/alloy.js"></script>
 
 <script nonce="aem">
@@ -67,8 +82,8 @@
         defaultConsent: "in",
         edgeDomain: "edge.adobedc.net",
         edgeBasePath: "ee",
-        datastreamId: "6ee2f773-f1af-4509-a1a5-e5561e1aa214", // replace datastreamId
-        orgId: "450981EE69FC3BD80A495FAD@AdobeOrg", // replace ims org Id
+        datastreamId: "XXXXX", // replace datastreamId
+        orgId: "--aepImsOrgId--", // replace ims org Id
         debugEnabled: true,
         idMigrationEnabled: false,
         thirdPartyCookiesEnabled: false,
@@ -89,6 +104,7 @@ window["alloy"]("sendEvent", {
     })
 });
 </script>
+
 
 
 <link rel="modulepreload" href="/scripts/__dropins__/tools/lib/aem/configs.js" />
